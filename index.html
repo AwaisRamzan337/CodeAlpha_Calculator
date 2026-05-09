@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calc — CodeAlpha</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="bg-layer" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <main class="stage">
+    <div class="calc" role="application" aria-label="Calculator">
+
+      <div class="topbar">
+        <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+        <span class="brand">CODEALPHA</span>
+        <div class="badge">CALC</div>
+      </div>
+
+      <div class="display" aria-live="polite">
+        <div class="expr" id="expression">&nbsp;</div>
+        <div class="number" id="result">0</div>
+      </div>
+
+      <div class="pad">
+        <button class="btn util"  id="clear"      >AC</button>
+        <button class="btn util"  data-val="sign" >+/−</button>
+        <button class="btn util"  data-val="%"    >%</button>
+        <button class="btn op"    data-val="/"    >÷</button>
+
+        <button class="btn num"   data-val="7">7</button>
+        <button class="btn num"   data-val="8">8</button>
+        <button class="btn num"   data-val="9">9</button>
+        <button class="btn op"    data-val="*">×</button>
+
+        <button class="btn num"   data-val="4">4</button>
+        <button class="btn num"   data-val="5">5</button>
+        <button class="btn num"   data-val="6">6</button>
+        <button class="btn op"    data-val="-">−</button>
+
+        <button class="btn num"   data-val="1">1</button>
+        <button class="btn num"   data-val="2">2</button>
+        <button class="btn num"   data-val="3">3</button>
+        <button class="btn op"    data-val="+">+</button>
+
+        <button class="btn num wide" data-val="0">0</button>
+        <button class="btn num"      data-val=".">.</button>
+        <button class="btn eq"       id="equals" >=</button>
+      </div>
+
+      <p class="hint">⌨ keyboard supported · esc to reset</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
